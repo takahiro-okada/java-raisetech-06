@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Hello World</title>
@@ -7,5 +7,16 @@
 <body>
     <h1>Hello World!!</h1>
     <h2 th:text="${message}"></h2>
+
+    <form action="/" method="post">
+        <p>国を選んでください。各国の挨拶を確認できます</p>
+        <select name="country_name">
+            <option value="japan">日本</option>
+            <option value="us">アメリカ</option>
+            <option value="china">中国</option>
+        </select>
+        <button type="submit">挨拶を確認する</button>
+    </form>
+    <p th:text="${countryGreeting}"></p>
 </body>
 </html>
