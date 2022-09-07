@@ -1,6 +1,6 @@
 package com.example.devoka.controller;
 
-import domain.CurrentTime;
+import com.example.devoka.domain.CurrentTime;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,10 +19,9 @@ public class IndexController {
     }
 
     @PostMapping("/")
-    public String result(@RequestParam String country_name, Model model) {
-        String countryGreeting = null;
-        System.out.println(country_name);
-        switch (country_name) {
+    public String result(@RequestParam String countryName, Model model) {
+        String countryGreeting = "こんにちは！";
+        switch (countryName) {
             case "japan":
                 countryGreeting = "こんにちは！";
                 break;
