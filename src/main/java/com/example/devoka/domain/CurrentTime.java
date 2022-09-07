@@ -6,8 +6,6 @@ import java.time.format.DateTimeFormatter;
 
 public class CurrentTime {
 
-    private static Object LocalDateTime;
-
     public static String getCurrentTime(){
         LocalDate nowDate = LocalDate.now();
         System.out.println(nowDate);
